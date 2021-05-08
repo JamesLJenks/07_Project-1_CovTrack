@@ -68,5 +68,6 @@ body {
 
 .btn {
     background-color: darkred;
+    border-radius: 10px;
 }
 
