@@ -26,10 +26,11 @@
             <div class="uk-grid-match uk-child-width-expand@m" uk-grid>
                 <div>
                     <div class="uk-card uk-card-default uk-card-body">
+
                         <h5>Search for another country.</h5>
-                        <form class="uk-search uk-search-default">
-                            <button href="" uk-search-icon class="btn"></button>
-                            <input class="uk-search-input" type="text" placeholder="Search.." name="search">
+                        <form id="search-form" class="uk-search uk-search-default">
+                            <a href="" uk-search-icon class="btn" id="search-button"></a>
+                            <input id="search-input" class="uk-search-input" type="text" placeholder="Search another country">
                         </form>
                     </div>
                 </div>
@@ -40,7 +41,10 @@
                 </div>
                 <div>
                     <div class="uk-card uk-card-default uk-card-body">
-                        <h5>Cases in Searched Country</h5>
+                        <h5>Total Confirmed Cases in Searched Country<span id="other-countries"></span></h5>
+                        <div id="result-content">
+
+                        </div>
                     </div>
                 </div>
             </div>
@@ -56,5 +60,5 @@
   crossorigin="anonymous"></script>
 <script src="https://cdn.jsdelivr.net/npm/uikit@3.6.21/dist/js/uikit.min.js"></script>
 <script src="https://cdn.jsdelivr.net/npm/uikit@3.6.21/dist/js/uikit-icons.min.js"></script>
-
+<script src="https://cdn.jsdelivr.net/npm/uikit@3.6.21/dist/js/uikit-icons.min.js"></script>
 </html>
