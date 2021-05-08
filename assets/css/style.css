@@ -1,0 +1,8 @@
+.header-background-gradient {
+    background-image: linear-gradient(180deg, rgba(00,00,00,0.25), rgba(00,00,00,0.75));
+}
+
+.main-section-background-gradient {
+    background-image: linear-gradient(180deg, darkred, black);
+}
+
