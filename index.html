@@ -10,24 +10,24 @@
 </head>
 
 <body>
-    <header class="header-background-gradient">
-        <div class="uk-height-medium uk-flex uk-flex-center uk-flex-middle uk-background-cover uk-light"
-            data-src="https://www.fda.gov/files/covid19-1600x900.jpg" uk-img>
+    <header class="header-background">
+        <div class="uk-height-medium uk-flex uk-flex-center uk-flex-middle uk-background-cover uk-light">
             <h1>CovTracker</h1>
         </div>
     </header>
 
-    <div class="uk-section uk-section-primary uk-preserve-color main-section-background-gradient">
+    <section class="uk-section uk-section-primary uk-preserve-color main-section-background">
         <div class="uk-container">
     
-            <div class="uk-panel uk-light uk-margin-medium">
-                <h3>dummy</h3>
+            <div class="uk-panel uk-light uk-margin-medium uk-text-center">
+                <h6>Use this tool to compare the number of COVID-19 cases in your country with the number of cases in another country.</h6>
             </div>
     
             <div class="uk-grid-match uk-child-width-expand@m" uk-grid>
                 <div>
                     <div class="uk-card uk-card-default uk-card-body">
-                        <p>Search for another country.</p>
+
+                        <h5>Search for another country.</h5>
                         <form id="search-form" class="uk-search uk-search-default">
                             <a href="" uk-search-icon class="btn" id="search-button"></a>
                             <input id="search-input" class="uk-search-input" type="text" placeholder="Search another country">
@@ -36,12 +36,12 @@
                 </div>
                 <div>
                     <div class="uk-card uk-card-default uk-card-body">
-                        <p>numbers from ip address</p>
+                        <h5>Cases in Your Country</h5>
                     </div>
                 </div>
                 <div>
                     <div class="uk-card uk-card-default uk-card-body">
-                        <h2>Showing results for <span id="other-countries"></span></h2>
+                        <h5>Total Confirmed Cases in Searched Country<span id="other-countries"></span></h5>
                         <div id="result-content">
 
                         </div>
@@ -50,10 +50,14 @@
             </div>
     
         </div>
-    </div>
+    </section>
 
 </body>
 
+<script
+  src="https://code.jquery.com/jquery-3.6.0.min.js"
+  integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4="
+  crossorigin="anonymous"></script>
 <script src="https://cdn.jsdelivr.net/npm/uikit@3.6.21/dist/js/uikit.min.js"></script>
 <script src="https://cdn.jsdelivr.net/npm/uikit@3.6.21/dist/js/uikit-icons.min.js"></script>
 <script src="https://cdn.jsdelivr.net/npm/uikit@3.6.21/dist/js/uikit-icons.min.js"></script>
