@@ -71,3 +71,9 @@ body {
     border-radius: 10px;
 }
 
+.uk-search-input {
+    text-align: center;
+    border-top-left-radius: 10px;
+    border-bottom-left-radius: 10px;
+}
+
