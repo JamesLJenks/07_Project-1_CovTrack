@@ -22,6 +22,7 @@ function searchResults(resultObj){
           url:"https://covid-api.mmediagroup.fr/v1/cases?country=" + searchInput,
           method: "GET"
       }).then(function (apiResponse) {
-          console.log("todayForecastData", apiResponse);
+          console.log(apiResponse);
+          searchResults(apiResponse)
       })
   }
