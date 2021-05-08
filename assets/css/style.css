@@ -1,8 +1,15 @@
-.header-background-gradient {
-    background-image: linear-gradient(180deg, rgba(00,00,00,0.25), rgba(00,00,00,0.75));
+.header-background {
+    display: flex;
+    justify-content: center;
+    width: 100%;
+    height: 33.333vh;
+    background-image: linear-gradient(180deg, rgba(00,00,00,0.25), rgba(00,00,00,0.75)), url("../images/COVID-19_Hero-Image.jpg");
+    background-size: cover;
+    background-position: center;
 }
 
-.main-section-background-gradient {
+.main-section-background {
     background-image: linear-gradient(180deg, darkred, black);
+    height: 66.666vh;
 }
 
