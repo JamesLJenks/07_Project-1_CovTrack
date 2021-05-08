@@ -70,5 +70,6 @@ li, a, button {
 
 .btn {
     background-color: darkred;
+    border-radius: 10px;
 }
 
