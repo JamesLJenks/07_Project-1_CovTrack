@@ -26,6 +26,7 @@ h3 {
   
 h4 {
     font-family: futura-pt, sans-serif;
+    line-height: 1.75rem;
     font-size: 1.5rem;
 }
   
@@ -69,13 +70,21 @@ li, a, button {
 }
 
 .btn {
-    background-color: darkred;
+    background-color: rgb(159, 0, 0);
     border-radius: 10px;
 }
 
 .uk-search-input {
     text-align: center;
+    width: 272px;
     border-top-left-radius: 10px;
     border-bottom-left-radius: 10px;
 }
 
+.uk-card {
+    border-radius: 15px;
+    border-color: rgb(159, 0, 0);
+    border-style: solid;
+    border-width: 0.4rem;
+    box-shadow: black;
+}
