@@ -75,6 +75,7 @@ li, a, button {
 
 .uk-search-input {
     text-align: center;
+    width: 272px;
     border-top-left-radius: 10px;
     border-bottom-left-radius: 10px;
 }
