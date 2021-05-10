@@ -81,7 +81,7 @@ li, a, button {
 }
 
 .uk-card {
-    border-radius: 0.5rem;
+    border-radius: 15px;
     border-color: rgb(159, 0, 0);
     border-style: solid;
     border-width: 0.4rem;
