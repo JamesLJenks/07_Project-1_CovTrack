@@ -1,8 +1,9 @@
 function searchResults(resultObj){
     var confirmed = resultObj.All.confirmed;
-    
+    var country = resultObj.All.country
+
     var resultDiv = document.createElement('h3');
-    resultDiv.textContent = confirmed;
+    resultDiv.textContent = country +" = " + confirmed;
   
     var resultContent = document.getElementById("result-content");
     resultContent.append(resultDiv);
@@ -15,6 +16,7 @@ function searchResults(resultObj){
       console.log(searchInput);
 
       searchCountry(searchInput)
+
   });
 
   function searchCountry(searchInput) {
@@ -26,3 +28,11 @@ function searchResults(resultObj){
           searchResults(apiResponse)
       })
   }
+
+  
+fetch('https://api.country.is/1.179.112.0')
+.then(response => response.json())
+.then(data => console.log(data.country));
+
+
+
