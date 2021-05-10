@@ -79,3 +79,7 @@ li, a, button {
     border-bottom-left-radius: 10px;
 }
 
+.uk-card-body {
+    border-radius: 15px;
+    }
+
