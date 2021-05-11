@@ -1,13 +1,4 @@
-function searchResults(resultObj){
-    var confirmed = resultObj.All.confirmed;
-    var country = resultObj.All.country
 
-    var resultDiv = document.createElement('h3');
-    resultDiv.textContent = country +" = " + confirmed;
-  
-    var resultContent = document.getElementById("result-content");
-    resultContent.append(resultDiv);
-  }
   
   $("#search-form").on("submit", function(event) {
       event.preventDefault()
@@ -15,24 +6,50 @@ function searchResults(resultObj){
 
       console.log(searchInput);
 
-      searchCountry(searchInput)
+      searchCountry(searchInput, 2)
 
   });
 
-  function searchCountry(searchInput) {
+  function searchResults(resultObj, outputID){
+    var confirmed = resultObj.All.confirmed;
+    var country = resultObj.All.country
+
+    if(outputID === 1){
+        //put in first box
+        var resultDiv = document.createElement('h3');
+    resultDiv.textContent = country +" = " + confirmed;
+    var resultContent = document.getElementById('ip-content');
+    resultContent.innerHTML =""
+    resultContent.append(resultDiv);
+    }
+    else
+    {
+    //put in second box
+    var resultDiv = document.createElement('h3');
+    resultDiv.textContent = country +" = " + confirmed;
+    var resultContent = document.getElementById('result-content');
+    resultContent.innerHTML =""
+    resultContent.append(resultDiv);
+    }
+    
+  }
+
+  function searchCountry(searchInput, outputID) {
       $.ajax({
           url:"https://covid-api.mmediagroup.fr/v1/cases?country=" + searchInput,
           method: "GET"
       }).then(function (apiResponse) {
           console.log(apiResponse);
-          searchResults(apiResponse)
+          searchResults(apiResponse, outputID)
       })
   }
 
-  
-fetch('https://api.country.is/1.179.112.0')
-.then(response => response.json())
-.then(data => console.log(data.country));
+function showLocalCases(){
+    fetch('https://api.country.is')
+    .then(response => response.json())
+    .then(data => searchCountry(data.country, 1));
+}
 
+showLocalCases();
 
 
