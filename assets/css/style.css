@@ -66,7 +66,8 @@ li, a, button {
 
 .main-section-background {
     background-image: linear-gradient(180deg, darkred, black);
-    height: 66.666vh;
+    min-height: 66.666vh;
+    max-height: fit-content;
 }
 
 .btn {
