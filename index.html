@@ -19,23 +19,23 @@
     <section class="uk-section uk-section-primary uk-preserve-color main-section-background">
         <div class="uk-container">
     
-            <div class="uk-panel uk-light uk-margin-medium uk-text-center">
-                <h5>Use this tool to compare the number of COVID-19 cases in your country with the number of cases in another country.</h5>
+            <div class="uk-panel uk-light uk-margin-large uk-text-center page-description-container">
+                <h5 class="page-description">Use this tool to compare the total number of confirmed COVID-19 cases in your country with the number of confirmed cases in another country.</h5>
             </div>
     
             <div class="uk-grid-match uk-child-width-expand@m" uk-grid>
                 <div>
                     <div class="uk-card uk-card-default uk-card-body">
-
                         <h5>Search for another country.</h5>
                         <form id="search-form" class="uk-search uk-search-default">
                             <button uk-search-icon class="btn" type="submit" id="search-button"></button>
-                            <input id="search-input" class="uk-search-input" type="text" placeholder="Search a country">
+                            <input id="search-input" class="uk-search-input" type="text" placeholder="Type name of country">
                         </form>
                     </div>
                 </div>
                 <div>
                     <div class="uk-card uk-card-default uk-card-body">
+                        <h5 class="card-header">Your Country</h5>
                         <div id="ip-cases"></div>
                         <h4 class="uk-text-center">Total confirmed cases of COVID-19 in</h4>
                         <div id="ip-country"></div>
@@ -43,6 +43,7 @@
                 </div>
                 <div>
                     <div class="uk-card uk-card-default uk-card-body">
+                        <h5 class="card-header">Other Country</h5>
                         <div id="result-cases"></div>
                         <h4 class="uk-text-center">Total confirmed cases of COVID-19 in <span id="other-countries"></span></h4>
                         <div id="result-content">

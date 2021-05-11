@@ -8,20 +8,28 @@ body {
 h1 {
     font-family: futura-pt, sans-serif;
     font-weight: 700;
-    /* 4rem = 40px (4 * 10px) */
     font-size: 3.5rem;
 }
   
 h2 {
     font-family: futura-pt, sans-serif;
     font-weight: 700;
-    font-size: 2.25rem;
+    font-size: 2.5rem;
+    background-color: darkred;
+    background-image: linear-gradient(180deg, red, darkred);
+    background-size: 100%;
+    -webkit-background-clip: text;
+    -moz-background-clip: text;
+    -webkit-text-fill-color: transparent; 
+    -moz-text-fill-color: transparent;
+    text-align: center;
 }
   
 h3 {
     font-family: futura-pt, sans-serif;
     font-weight: 700;
     font-size: 2rem;
+    text-align: center;
 }
   
 h4 {
@@ -54,38 +62,78 @@ li, a, button {
     text-transform: uppercase;
 }
 
+.page-description {
+    display: flex;
+    justify-content: center;
+    max-width: 70%;
+    margin: auto;
+}
+
+.page-description-container {
+    margin-bottom: 3rem;
+}
+
 .header-background {
     display: flex;
     justify-content: center;
     width: 100%;
-    height: 33.333vh;
+    height: 30vh;
     background-image: linear-gradient(180deg, rgba(00,00,00,0.25), rgba(00,00,00,0.75)), url("../images/COVID-19_Hero-Image.jpg");
     background-size: cover;
     background-position: center;
 }
 
+.card-header {
+    display: block;
+    text-align: center;
+    position: relative;
+    margin: -4rem 0 1.5rem 0;
+    padding: 0.5rem 1rem;
+    background-color: rgb(181, 0, 0);
+    color: white;
+    border: 2px solid var(--gin);
+    border-radius: 10px;
+    transition: all 0.5s ease-in-out;
+}
+
 .main-section-background {
     background-image: linear-gradient(180deg, darkred, black);
-    min-height: 66.666vh;
+    min-height: 70vh;
     max-height: fit-content;
 }
 
 .btn {
-    background-color: rgb(159, 0, 0);
+    background-color: rgb(181, 0, 0);
     border-radius: 10px;
+}
+
+.uk-search {
+    width: 100%;
 }
 
 .uk-search-input {
     text-align: center;
-    width: 272px;
+    width: 100%;
     border-top-left-radius: 10px;
     border-bottom-left-radius: 10px;
 }
 
 .uk-card {
     border-radius: 15px;
-    border-color: rgb(159, 0, 0);
+    border-color: rgb(181, 0, 0);
     border-style: solid;
     border-width: 0.4rem;
     box-shadow: black;
+    margin-top: 1rem;
+}
+
+@media screen and (max-width: 1200px) {
+    .card-header {
+        margin: -3.5rem 0 1.5rem 0;
+        transition: all 0.5s ease-in-out;
+    }
+    
+    .page-description-container {
+        margin-bottom: 2.5rem;
+    }
 }
