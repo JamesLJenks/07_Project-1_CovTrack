@@ -1,6 +1,4 @@
-
-  
-  $("#search-form").on("submit", function(event) {
+$("#search-form").on("submit", function(event) {
       event.preventDefault()
       var searchInput = $("#search-input").val();
 
@@ -16,20 +14,45 @@
 
     if(outputID === 1){
         //put in first box
-        var resultDiv = document.createElement('h3');
-    resultDiv.textContent = country +" = " + confirmed;
-    var resultContent = document.getElementById('ip-content');
-    resultContent.innerHTML =""
-    resultContent.append(resultDiv);
-    }
+        var countryDiv = document.createElement('h3');
+    countryDiv.textContent = country;
+
+        var casesDiv = document.createElement('h2');
+    casesDiv.textContent = confirmed;
+
+    var casesContent = document.getElementById('ip-cases');
+    
+
+    var countryContent = document.getElementById('ip-country')
+        console.log(casesContent)
+        console.log(countryContent)
+    //casesContent.innerHTML =" "
+    //countryContent.innerHTML =" "
+
+    casesContent.append(casesDiv);
+
+    countryContent.append(countryDiv)
+     }
     else
     {
     //put in second box
-    var resultDiv = document.createElement('h3');
-    resultDiv.textContent = country +" = " + confirmed;
-    var resultContent = document.getElementById('result-content');
+        var resultDiv = document.createElement('h3');
+    resultDiv.textContent = country;
+
+        var resultCasesDiv = document.createElement('h2');
+    resultCasesDiv.textContent = confirmed;
+
+    var resultCasesContent = document.getElementById('result-cases');
+
+
+    var resultContent = document.getElementById('result-content')
+        
+    resultCasesContent.innerHTML =""
     resultContent.innerHTML =""
-    resultContent.append(resultDiv);
+
+    resultCasesContent.append(resultCasesDiv);
+
+    resultContent.append(resultDiv)
     }
     
   }
