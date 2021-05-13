@@ -5,6 +5,7 @@
     <title>CovTracker by JACET</title>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
+    <!--link to UI Kit, used as an alternative to Bootstrap, and custom css sheet-->
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/uikit@3.6.21/dist/css/uikit.min.css" />
     <link rel="stylesheet" type="text/css" href="./assets/css/style.css" />
 </head>
@@ -25,6 +26,7 @@
     
             <div class="uk-grid-match uk-child-width-expand@m" uk-grid>
                 <div>
+                    <!-- user can search any country to compare numbers of C-19 cases-->
                     <div class="uk-card uk-card-default uk-card-body">
                         <h5>Searched Country</h5>
                         <form id="search-form" class="uk-search uk-search-default">
@@ -33,6 +35,7 @@
                         </form>
                     </div>
                 </div>
+                <!--Total number of C-19 cases in current location, based on user's IP address, will be appended to the following-->
                 <div>
                     <div class="uk-card uk-card-default uk-card-body">
                         <h5 class="card-header">Current Location</h5>
@@ -41,6 +44,7 @@
                         <div id="ip-country"></div>
                     </div>
                 </div>
+                <!--User can search any country and the total number of C-19 cases will be appended to the following from the API-->
                 <div>
                     <div class="uk-card uk-card-default uk-card-body">
                         <h5 class="card-header">Other Country</h5>
@@ -58,6 +62,7 @@
 
 </body>
 
+<!--links to libraries and custom Javascript-->
 <script
   src="https://code.jquery.com/jquery-3.6.0.min.js"
   integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4="
