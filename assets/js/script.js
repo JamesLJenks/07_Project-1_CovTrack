@@ -2,6 +2,8 @@ $("#search-form").on("submit", function(event) {
       event.preventDefault()
       var searchInput = $("#search-input").val();
 
+      searchInput = capitalizeFirstLetter(searchInput)
+
       console.log(searchInput);
 
       searchCountry(searchInput, 2)
@@ -11,6 +13,8 @@ $("#search-form").on("submit", function(event) {
   function searchResults(resultObj, outputID){
     var confirmed = resultObj.All.confirmed;
     var country = resultObj.All.country
+
+    confirmed = numberWithCommas(confirmed)
 
     if(outputID === 1){
         //put in first box
@@ -72,6 +76,14 @@ function showLocalCases(){
     .then(response => response.json())
     .then(data => searchCountry(data.country, 1));
 }
+
+function numberWithCommas(x) {
+    return x.toString().replace(/\B(?=(\d{3})+(?!\d))/g, ",");
+}
+
+function capitalizeFirstLetter(string) {
+    return string.charAt(0).toUpperCase() + string.slice(1);
+  }
 
 showLocalCases();
 
