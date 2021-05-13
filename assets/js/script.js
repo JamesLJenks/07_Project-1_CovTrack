@@ -1,15 +1,16 @@
+//This function uses the country that was typed into the search box and uses that info to ask the API for covid cases in that country.
 $("#search-form").on("submit", function(event) {
       event.preventDefault()
       var searchInput = $("#search-input").val();
-
-      searchInput = capitalizeFirstLetter(searchInput)
+        
+      searchInput = capitalizeFirstLetter(searchInput) //calling the function to set the proper format four country names in the API
 
       console.log(searchInput);
 
-      searchCountry(searchInput, 2)
+      searchCountry(searchInput, 2)//telling this function to append this info into box 2(else statement)
 
   });
-
+//This function uses the API info and appends it to the HTML boxes. It also deciphers which box to append information into. 
   function searchResults(resultObj, outputID){
     var confirmed = resultObj.All.confirmed;
     var country = resultObj.All.country
@@ -30,8 +31,7 @@ $("#search-form").on("submit", function(event) {
     var countryContent = document.getElementById('ip-country')
         console.log(casesContent)
         console.log(countryContent)
-    //casesContent.innerHTML =" "
-    //countryContent.innerHTML =" "
+
 
     casesContent.append(casesDiv);
 
@@ -60,8 +60,8 @@ $("#search-form").on("submit", function(event) {
     }
     
   }
-
-  function searchCountry(searchInput, outputID) {
+//this function calls the API with either the ip address info or the searched country info
+  function searchCountry(searchInput, outputID) { 
       $.ajax({
           url:"https://covid-api.mmediagroup.fr/v1/cases?country=" + searchInput,
           method: "GET"
@@ -70,17 +70,17 @@ $("#search-form").on("submit", function(event) {
           searchResults(apiResponse, outputID)
       })
   }
-
+//This function runs on page load, it calls to an API that uses your ip location and returns a country.
 function showLocalCases(){
     fetch('https://api.country.is')
     .then(response => response.json())
-    .then(data => searchCountry(data.country, 1));
+    .then(data => searchCountry(data.country, 1));//telling this to append info into box 1 on the page
 }
-
+//Function to add commas to our case numbers returned from API
 function numberWithCommas(x) {
     return x.toString().replace(/\B(?=(\d{3})+(?!\d))/g, ",");
 }
-
+//Function to capitalize the first letter in the search box, in case the user types all lowercase.
 function capitalizeFirstLetter(string) {
     return string.charAt(0).toUpperCase() + string.slice(1);
   }
