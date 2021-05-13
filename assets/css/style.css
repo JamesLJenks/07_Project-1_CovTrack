@@ -1,4 +1,6 @@
+/* Adobe Typekit */
 @import url("https://use.typekit.net/our6hxd.css");
+
 
 body {
     font-family: futura-pt, sans-serif;
@@ -62,6 +64,18 @@ li, a, button {
     text-transform: uppercase;
 }
 
+/* Header hero section */
+.header-background {
+    display: flex;
+    justify-content: center;
+    width: 100%;
+    height: 30vh;
+    background-image: linear-gradient(180deg, rgba(00,00,00,0.25), rgba(00,00,00,0.75)), url("../images/COVID-19_Hero-Image.jpg");
+    background-size: cover;
+    background-position: center;
+}
+
+/* Description at the top of the main section */
 .page-description {
     display: flex;
     justify-content: center;
@@ -73,16 +87,7 @@ li, a, button {
     margin-bottom: 3rem;
 }
 
-.header-background {
-    display: flex;
-    justify-content: center;
-    width: 100%;
-    height: 30vh;
-    background-image: linear-gradient(180deg, rgba(00,00,00,0.25), rgba(00,00,00,0.75)), url("../images/COVID-19_Hero-Image.jpg");
-    background-size: cover;
-    background-position: center;
-}
-
+/* Card headers for Current Country and Searched Country containers */
 .card-header {
     display: block;
     text-align: center;
@@ -96,6 +101,7 @@ li, a, button {
     transition: all 0.5s ease-in-out;
 }
 
+/* Main Section */
 .main-section-background {
     background-image: linear-gradient(180deg, darkred, black);
     min-height: 70vh;
@@ -107,10 +113,12 @@ li, a, button {
     border-radius: 10px;
 }
 
+/* Adjusts width of search container */
 .uk-search {
     width: 100%;
 }
 
+/* Adjusts width of search input */
 .uk-search-input {
     text-align: center;
     width: 100%;
@@ -118,6 +126,7 @@ li, a, button {
     border-bottom-left-radius: 10px;
 }
 
+/* Styling for card containers */
 .uk-card {
     border-radius: 15px;
     border-color: rgb(181, 0, 0);
@@ -127,6 +136,7 @@ li, a, button {
     margin-top: 1rem;
 }
 
+/* Responsive sizing of application */
 @media screen and (max-width: 1200px) {
     .card-header {
         margin: -3.5rem 0 1.5rem 0;
